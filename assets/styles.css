@@ -294,6 +294,10 @@ h3 {
   margin-top: 1.5rem;
 }
 
+.detail-video-first {
+  grid-template-columns: 1fr;
+}
+
 .detail-panel {
   padding: 1.5rem;
   border: 1px solid var(--line);
@@ -305,6 +309,7 @@ h3 {
 
 .video-panel {
   align-self: start;
+  padding: 0;
 }
 
 .video-frame {
@@ -312,7 +317,7 @@ h3 {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 28px;
   background: rgba(255, 255, 255, 0.04);
 }
 
