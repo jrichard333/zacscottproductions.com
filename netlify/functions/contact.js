@@ -1,9 +1,6 @@
 const sgMail = require('@sendgrid/mail');
 
-// Basic in-memory rate limiting (best-effort in serverless warm containers)
-const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour window
-const RATE_MAX = 5; // max requests per IP per window
-const rateMap = new Map();
+// Note: rate-limiting removed per user request
 
 exports.handler = async function (event, context) {
   if (event.httpMethod !== 'POST') {
@@ -22,20 +19,10 @@ exports.handler = async function (event, context) {
     return { statusCode: 400, body: 'Missing required fields' };
   }
 
-  // Basic logging and rate-limiting
+  // Basic submission logging
   const ip = (event.headers && (event.headers['x-forwarded-for'] || event.headers['client-ip']))
     ? (event.headers['x-forwarded-for'] || event.headers['client-ip']).split(',')[0].trim()
     : (context && context.identity && context.identity.sourceIp) || 'unknown';
-  const now = Date.now();
-  const timestamps = rateMap.get(ip) || [];
-  const recent = timestamps.filter((ts) => now - ts < RATE_WINDOW_MS);
-  recent.push(now);
-  rateMap.set(ip, recent);
-  if (recent.length > RATE_MAX) {
-    console.warn(`Rate limit exceeded for IP ${ip} — ${recent.length} requests in window`);
-    return { statusCode: 429, body: 'Too many requests, please try again later.' };
-  }
-
   console.info('Contact form submission', { ip, name, subjectLength: (subject || '').length });
 
   const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
