@@ -31,53 +31,12 @@
         </header>
 
         <section class="contact-form">
-          <form id="contactForm">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <!-- Email input removed per request -->
-
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="8" required></textarea>
-
-            <button class="button button-primary" type="submit">Send Message</button>
-          </form>
+          <div class="contact-details">
+            <p>Email: <a class="text-link" href="mailto:zscott1212@gmail.com">zscott1212@gmail.com</a></p>
+            <p>Phone Number: <a class="text-link" href="tel:978-761-6478">978-761-6478</a></p>
+          </div>
         </section>
       </main>
     </div>
-
-    <script>
-      // Client-side POST to Netlify serverless function
-      document.getElementById('contactForm').addEventListener('submit', async function (e) {
-        e.preventDefault();
-        var form = e.target;
-        var payload = {
-          name: document.getElementById('name').value.trim(),
-          subject: document.getElementById('subject').value.trim(),
-          message: document.getElementById('message').value.trim(),
-        };
-
-        try {
-          var res = await fetch('/.netlify/functions/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-          });
-
-          if (res.ok) {
-            alert('Message sent — thank you!');
-            form.reset();
-          } else {
-            var text = await res.text();
-            alert('Error sending message: ' + text);
-          }
-        } catch (err) {
-          alert('Error sending message. Please try again later.');
-        }
-      });
-    </script>
   </body>
 </html>
