@@ -50,27 +50,29 @@
     </div>
 
     <script>
-      // Client-side POST to Formspree. Replace YOUR_FORM_ID with your Formspree form ID
-      // and configure the destination email on Formspree to zscott1212@gmail.com.
+      // Client-side POST to Netlify serverless function
       document.getElementById('contactForm').addEventListener('submit', async function (e) {
         e.preventDefault();
         var form = e.target;
-        var formData = new FormData(form);
-        var endpoint = 'https://formspree.io/f/YOUR_FORM_ID'; // <-- replace this
+        var payload = {
+          name: document.getElementById('name').value.trim(),
+          subject: document.getElementById('subject').value.trim(),
+          message: document.getElementById('message').value.trim(),
+        };
 
         try {
-          var res = await fetch(endpoint, {
+          var res = await fetch('/.netlify/functions/contact', {
             method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: formData,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
           });
 
           if (res.ok) {
             alert('Message sent — thank you!');
             form.reset();
           } else {
-            var data = await res.json();
-            alert('Error sending message: ' + (data.error || 'Unknown error'));
+            var text = await res.text();
+            alert('Error sending message: ' + text);
           }
         } catch (err) {
           alert('Error sending message. Please try again later.');
