@@ -39,4 +39,4 @@ Use object storage for audio/video files and keep the website static.
 - Replace placeholder titles and descriptions
 - Add real poster art / cover art
 - Paste embed codes into the placeholder areas
-- Add links for streaming platforms, trailers, credits, and contact info
+- Add links for streaming platforms, trailers, and credits
