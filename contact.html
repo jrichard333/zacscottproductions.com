@@ -35,8 +35,7 @@
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
 
-            <label for="email">Your email</label>
-            <input type="email" id="email" name="email" required />
+            <!-- Email input removed per request -->
 
             <label for="subject">Subject</label>
             <input type="text" id="subject" name="subject" required />
@@ -56,12 +55,11 @@
         e.preventDefault();
         var to = 'zscott1212@gmail.com';
         var name = document.getElementById('name').value.trim();
-        var email = document.getElementById('email').value.trim();
         var subject = document.getElementById('subject').value.trim();
         var message = document.getElementById('message').value.trim();
 
         var mailSubject = encodeURIComponent(subject);
-        var mailBody = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+        var mailBody = encodeURIComponent('Name: ' + name + '\n\n' + message);
 
         window.location.href = 'mailto:' + to + '?subject=' + mailSubject + '&body=' + mailBody;
       });
