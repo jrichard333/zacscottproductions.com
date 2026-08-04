@@ -41,78 +41,106 @@
           </p>
         </section>
 
-        <div class="thumb-grid page-grid">
-          <article class="panel">
-            <p class="panel-kicker">1. Too Late</p>
-            <div class="bandcamp-player-frame">
-              <iframe
-                class="bandcamp-player"
-                src="https://bandcamp.com/EmbeddedPlayer/v=2/track=895848106/size=large/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                title="Too Late"
-              ></iframe>
-            </div>
-          </article>
+        <div class="tab-shell">
+          <input type="radio" name="music-tab" id="tab-album" checked hidden>
+          <input type="radio" name="music-tab" id="tab-tracks" hidden>
 
-          <article class="panel">
-            <p class="panel-kicker">2. Queen Of Ice</p>
-            <div class="bandcamp-player-frame">
-              <iframe
-                class="bandcamp-player"
-                src="https://bandcamp.com/EmbeddedPlayer/v=2/track=318295443/size=large/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                title="Queen Of Ice"
-              ></iframe>
-            </div>
-          </article>
+          <div class="tab-controls">
+            <label class="tab-button" for="tab-album">One Step Ahead Of Myself</label>
+            <label class="tab-button" for="tab-tracks">Track List</label>
+          </div>
 
-          <article class="panel">
-            <p class="panel-kicker">3. If I Knew My Way</p>
-            <div class="bandcamp-player-frame">
-              <iframe
-                class="bandcamp-player"
-                src="https://bandcamp.com/EmbeddedPlayer/v=2/track=649776441/size=large/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                title="If I Knew My Way"
-              ></iframe>
-            </div>
-          </article>
+          <div class="tab-panels">
+            <div class="tab-panel panel-album">
+              <div class="thumb-grid page-grid">
+                <article class="panel">
+                  <p class="panel-kicker">1. Too Late</p>
+                  <div class="bandcamp-player-frame">
+                    <iframe
+                      class="bandcamp-player"
+                      src="https://bandcamp.com/EmbeddedPlayer/v=2/track=895848106/size=large/tracklist=false/artwork=small/transparent=true/"
+                      seamless
+                      title="Too Late"
+                    ></iframe>
+                  </div>
+                </article>
 
-          <article class="panel">
-            <p class="panel-kicker">4. How Long</p>
-            <div class="bandcamp-player-frame">
-              <iframe
-                class="bandcamp-player"
-                src="https://bandcamp.com/EmbeddedPlayer/v=2/track=3634475585/size=large/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                title="How Long"
-              ></iframe>
-            </div>
-          </article>
+                <article class="panel">
+                  <p class="panel-kicker">2. Queen Of Ice</p>
+                  <div class="bandcamp-player-frame">
+                    <iframe
+                      class="bandcamp-player"
+                      src="https://bandcamp.com/EmbeddedPlayer/v=2/track=318295443/size=large/tracklist=false/artwork=small/transparent=true/"
+                      seamless
+                      title="Queen Of Ice"
+                    ></iframe>
+                  </div>
+                </article>
 
-          <article class="panel">
-            <p class="panel-kicker">5. Older</p>
-            <div class="bandcamp-player-frame">
-              <iframe
-                class="bandcamp-player"
-                src="https://bandcamp.com/EmbeddedPlayer/v=2/track=3079816215/size=large/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                title="Older"
-              ></iframe>
-            </div>
-          </article>
+                <article class="panel">
+                  <p class="panel-kicker">3. If I Knew My Way</p>
+                  <div class="bandcamp-player-frame">
+                    <iframe
+                      class="bandcamp-player"
+                      src="https://bandcamp.com/EmbeddedPlayer/v=2/track=649776441/size=large/tracklist=false/artwork=small/transparent=true/"
+                      seamless
+                      title="If I Knew My Way"
+                    ></iframe>
+                  </div>
+                </article>
 
-          <article class="panel">
-            <p class="panel-kicker">6. Baby I'm Coming Home</p>
-            <div class="bandcamp-player-frame">
-              <iframe
-                class="bandcamp-player"
-                src="https://bandcamp.com/EmbeddedPlayer/v=2/track=1233411376/size=large/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                title="Baby I'm Coming Home"
-              ></iframe>
+                <article class="panel">
+                  <p class="panel-kicker">4. How Long</p>
+                  <div class="bandcamp-player-frame">
+                    <iframe
+                      class="bandcamp-player"
+                      src="https://bandcamp.com/EmbeddedPlayer/v=2/track=3634475585/size=large/tracklist=false/artwork=small/transparent=true/"
+                      seamless
+                      title="How Long"
+                    ></iframe>
+                  </div>
+                </article>
+
+                <article class="panel">
+                  <p class="panel-kicker">5. Older</p>
+                  <div class="bandcamp-player-frame">
+                    <iframe
+                      class="bandcamp-player"
+                      src="https://bandcamp.com/EmbeddedPlayer/v=2/track=3079816215/size=large/tracklist=false/artwork=small/transparent=true/"
+                      seamless
+                      title="Older"
+                    ></iframe>
+                  </div>
+                </article>
+
+                <article class="panel">
+                  <p class="panel-kicker">6. Baby I'm Coming Home</p>
+                  <div class="bandcamp-player-frame">
+                    <iframe
+                      class="bandcamp-player"
+                      src="https://bandcamp.com/EmbeddedPlayer/v=2/track=1233411376/size=large/tracklist=false/artwork=small/transparent=true/"
+                      seamless
+                      title="Baby I'm Coming Home"
+                    ></iframe>
+                  </div>
+                </article>
+              </div>
             </div>
-          </article>
+
+            <div class="tab-panel panel-tracks">
+              <article class="panel">
+                <p class="panel-kicker">Track List</p>
+                <ol class="track-list">
+                  <li>Too Late</li>
+                  <li>Queen Of Ice</li>
+                  <li>If I Knew My Way</li>
+                  <li>How Long</li>
+                  <li>Older</li>
+                  <li>Baby I'm Coming Home</li>
+                </ol>
+              </article>
+            </div>
+          </div>
         </div>
       </main>
     </div>

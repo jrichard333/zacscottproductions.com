@@ -378,15 +378,29 @@ h3 {
 }
 
 #tab-asyouare:checked ~ .tab-panels .panel-asyouare,
-#tab-mr-sunshine:checked ~ .tab-panels .panel-mr-sunshine {
+#tab-mr-sunshine:checked ~ .tab-panels .panel-mr-sunshine,
+#tab-album:checked ~ .tab-panels .panel-album,
+#tab-tracks:checked ~ .tab-panels .panel-tracks {
   display: block;
 }
 
 #tab-asyouare:checked ~ .tab-controls label[for="tab-asyouare"],
-#tab-mr-sunshine:checked ~ .tab-controls label[for="tab-mr-sunshine"] {
+#tab-mr-sunshine:checked ~ .tab-controls label[for="tab-mr-sunshine"],
+#tab-album:checked ~ .tab-controls label[for="tab-album"],
+#tab-tracks:checked ~ .tab-controls label[for="tab-tracks"] {
   color: var(--text);
   background: linear-gradient(135deg, rgba(243, 184, 74, 0.16), rgba(255, 255, 255, 0.08));
   border-color: rgba(243, 184, 74, 0.4);
+}
+
+.track-list {
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.track-list li {
+  margin-bottom: 0.85rem;
 }
 
 .detail-thumb {
