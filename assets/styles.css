@@ -328,6 +328,20 @@ h3 {
   border: 0;
 }
 
+.bandcamp-player-frame {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.bandcamp-player {
+  width: 100%;
+  min-height: 240px;
+  border: 0;
+}
+
 .tab-shell {
   display: grid;
   gap: 1rem;
