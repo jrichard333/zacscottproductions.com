@@ -36,27 +36,43 @@
           <p class="panel-kicker">Featured Embeds</p>
           <h2>Watch these films directly on the page</h2>
         </div>
-        <div class="video-frame">
-          <iframe
-            width="100%"
-            height="450"
-            src="https://www.youtube.com/embed/Po_ryYj1WDo?si=OHj6Ye150Z3677bx"
-            title="As Crazy As You Are"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="video-frame">
-          <iframe
-            width="100%"
-            height="450"
-            src="https://www.youtube.com/embed/lDV5yGIRZ5k?si=PicpOEgK8hfeKXmO"
-            title="Mr. Sunshine"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <div class="tab-shell">
+          <input type="radio" name="embed-tab" id="tab-asyouare" checked hidden>
+          <input type="radio" name="embed-tab" id="tab-mr-sunshine" hidden>
+
+          <div class="tab-controls">
+            <label class="tab-button" for="tab-asyouare">As Crazy As You Are</label>
+            <label class="tab-button" for="tab-mr-sunshine">Mr. Sunshine</label>
+          </div>
+
+          <div class="tab-panels">
+            <div class="tab-panel panel-asyouare">
+              <div class="video-frame">
+                <iframe
+                  width="100%"
+                  height="450"
+                  src="https://www.youtube.com/embed/Po_ryYj1WDo?si=OHj6Ye150Z3677bx"
+                  title="As Crazy As You Are"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="tab-panel panel-mr-sunshine">
+              <div class="video-frame">
+                <iframe
+                  width="100%"
+                  height="450"
+                  src="https://www.youtube.com/embed/lDV5yGIRZ5k?si=PicpOEgK8hfeKXmO"
+                  title="Mr. Sunshine"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
