@@ -4,6 +4,9 @@ on:
   push:
     branches: [ fix/playsinline-embeds ]
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
