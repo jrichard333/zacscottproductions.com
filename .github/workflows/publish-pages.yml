@@ -1,0 +1,29 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [ fix/playsinline-embeds, main ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Publish to GitHub Pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          allow_empty_commit: true
+          clean: true
+
+# This workflow publishes the repository root to the 'gh-pages' branch
+# so the site is available at https://<owner>.github.io/<repo>/
